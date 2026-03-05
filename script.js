@@ -188,3 +188,4 @@ function closeModal() { document.getElementById('photoModal').style.display = "n
 initFlowers();
 
 animate();
+

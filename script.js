@@ -1,9 +1,9 @@
 const myPhotos = [
-    "Photos/1.jpg", "Photos/2.jpg", "Photos/3.jpg", "Photos/4.jpg", 
-    "Photos/5.jpg", "Photos/6.jpg", "Photos/7.jpg", "Photos/8.jpg",
-    "Photos/9.jpg", "Photos/10.jpg", "Photos/11.jpg", "Photos/12.jpg",
-    "Photos/13.jpg", "Photos/14.jpg", "Photos/15.jpg", "Photos/16.jpg",
-    "Photos/17.jpg", "Photos/18.jpg"
+    "1.jpg", "2.jpg", "3.jpg", "4.jpg", 
+    "5.jpg", "6.jpg", "7.jpg", "8.jpg",
+    "9.jpg", "10.jpg", "11.jpg", "12.jpg",
+    "13.jpg", "14.jpg", "15.jpg", "16.jpg",
+    "17.jpg", "18.jpg"
 ];
 
 const myCaptions = [
@@ -188,4 +188,5 @@ function closeModal() { document.getElementById('photoModal').style.display = "n
 initFlowers();
 
 animate();
+
 

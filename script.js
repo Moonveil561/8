@@ -1,9 +1,9 @@
 const myPhotos = [
-    "photos/1.jpg", "photos/2.jpg", "photos/3.jpg", "photos/4.jpg", 
-    "photos/5.jpg", "photos/6.jpg", "photos/7.jpg", "photos/8.jpg",
-    "photos/9.jpg", "photos/10.jpg", "photos/11.jpg", "photos/12.jpg",
-    "photos/13.jpg", "photos/14.jpg", "photos/15.jpg", "photos/16.jpg",
-    "photos/17.jpg", "photos/18.jpg"
+    "Photos/1.jpg", "Photos/2.jpg", "Photos/3.jpg", "Photos/4.jpg", 
+    "Photos/5.jpg", "Photos/6.jpg", "Photos/7.jpg", "Photos/8.jpg",
+    "Photos/9.jpg", "Photos/10.jpg", "Photos/11.jpg", "Photos/12.jpg",
+    "Photos/13.jpg", "Photos/14.jpg", "Photos/15.jpg", "Photos/16.jpg",
+    "Photos/17.jpg", "Photos/18.jpg"
 ];
 
 const myCaptions = [
@@ -186,4 +186,5 @@ function openModal(src) {
 function closeModal() { document.getElementById('photoModal').style.display = "none"; }
 
 initFlowers();
+
 animate();

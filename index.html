@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>С 8 Марта! ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="flowerCanvas"></canvas>
+    <canvas id="heartCanvas"></canvas>
+
+    <div class="container">
+        <div class="card" id="mainCard">
+            <div class="heart-loader"></div>
+            
+            <h1 id="title">Для самой особенной... ✨</h1>
+            <p id="description">В этот весенний день я подготовил для тебя кое-что особенное. Нажми на кнопку, чтобы открыть мой секрет.</p>
+            
+            <button class="magic-button" onclick="startMagic(event)">Узнать секрет</button>
+            
+            <div id="photoGallery"></div>
+
+            <div class="carousel-controls" id="controls" style="display:none;">
+                <button class="nav-btn prev" onclick="rotateCarousel(-1)">❮</button>
+                <button class="nav-btn next" onclick="rotateCarousel(1)">❯</button>
+            </div>
+
+            <div id="finalLetter" class="final-letter">
+                <hr class="line">
+                <h2>С праздником весны! 🌸</h2>
+                <p>Ты — самое яркое и теплое, что есть в моей жизни. Пусть каждый твой день будет наполнен улыбками, а эта весна станет началом чего-то невероятно прекрасного.</p>
+                <p>Я подготовил это «Колесо воспоминаний», чтобы ты всегда помнила, как ты удивительна и как много счастливых моментов мы прожили вместе. Сияй, вдохновляй и просто будь собой — ведь ты совершенна! ❤️</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="photoModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

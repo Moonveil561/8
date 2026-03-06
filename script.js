@@ -122,7 +122,7 @@ function startMagic(e) {
         // УВЕЛИЧИЛИ РАДИУС ДЛЯ БОЛЬШЕГО РАССТОЯНИЯ
 // Ставим 550, чтобы окончательно убрать нахлест
 // Меняем радиус на 490 для идеальной плотности
-const radius = window.innerWidth > 480 ? 490 : 380;
+const radius = window.innerWidth > 480 ? 530 : 400;
         
         myPhotos.forEach((src, i) => {
             const item = document.createElement('div');
@@ -187,6 +187,7 @@ function closeModal() { document.getElementById('photoModal').style.display = "n
 
 initFlowers();
 animate();
+
 
 
 

@@ -111,7 +111,6 @@ function startMagic(e) {
     if (gallery.style.display === 'none' || gallery.innerHTML === '') {
         card.classList.add('expanded');
         
-        // Обновляем тексты на праздничные
         document.getElementById('title').innerHTML = "Ты — моё вдохновение! ❤️";
         document.getElementById('description').innerHTML = "Викуля, пусть эта весна будет такой же яркой, как твоя улыбка. Крути наше колесо!";
         
@@ -120,7 +119,8 @@ function startMagic(e) {
         const carousel = document.getElementById('carousel');
 
         const total = myPhotos.length;
-        const radius = window.innerWidth > 480 ? 600 : 350; 
+        // УВЕЛИЧИЛИ РАДИУС ДЛЯ БОЛЬШЕГО РАССТОЯНИЯ
+        const radius = window.innerWidth > 480 ? 850 : 450; 
 
         myPhotos.forEach((src, i) => {
             const item = document.createElement('div');
@@ -144,14 +144,12 @@ function startMagic(e) {
             carousel.appendChild(item);
         });
 
-        // Показываем стрелки и финальное письмо
         const controls = document.getElementById('controls');
         if(controls) controls.style.display = 'flex';
         
         const finalLetter = document.getElementById('finalLetter');
         if(finalLetter) finalLetter.style.display = 'block';
 
-        // Управление мышкой/свайпом
         let isDragging = false, lastX;
         const handleStart = (x) => { isDragging = true; lastX = x; };
         const handleMove = (x) => {
@@ -186,7 +184,4 @@ function openModal(src) {
 function closeModal() { document.getElementById('photoModal').style.display = "none"; }
 
 initFlowers();
-
 animate();
-
-

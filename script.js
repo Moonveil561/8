@@ -120,10 +120,8 @@ function startMagic(e) {
 
         const total = myPhotos.length;
         // УВЕЛИЧИЛИ РАДИУС ДЛЯ БОЛЬШЕГО РАССТОЯНИЯ
-// Ставим 550, чтобы окончательно убрать нахлест
-// Меняем радиус на 490 для идеальной плотности
-const radius = window.innerWidth > 480 ? 530 : 400;
-        
+        const radius = window.innerWidth > 480 ? 850 : 450; 
+
         myPhotos.forEach((src, i) => {
             const item = document.createElement('div');
             item.className = 'carousel-item';
@@ -187,12 +185,3 @@ function closeModal() { document.getElementById('photoModal').style.display = "n
 
 initFlowers();
 animate();
-
-
-
-
-
-
-
-
-

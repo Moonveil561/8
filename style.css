@@ -57,9 +57,9 @@ body, html {
 
 /* 4. ГАЛЕРЕЯ: 3D КАРУСЕЛИ */
 #photoGallery {
-    margin-top: 120px; /* Увеличили отступ сверху */
+    margin-top: 80px;   /* Немного уменьшили отступ сверху, чтобы поднять выше */
     display: none;
-    height: 500px;
+    height: 350px;      /* Было 500px, уменьшаем, чтобы убрать «воздух» */
     perspective: 3000px;
     position: relative;
     align-items: center;
@@ -224,6 +224,7 @@ body, html {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

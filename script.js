@@ -120,8 +120,8 @@ function startMagic(e) {
 
         const total = myPhotos.length;
         // УВЕЛИЧИЛИ РАДИУС ДЛЯ БОЛЬШЕГО РАССТОЯНИЯ
-      
-const radius = window.innerWidth > 480 ? 500 : 350;
+const radius = window.innerWidth > 480 ? 1100 : 450;
+        
         myPhotos.forEach((src, i) => {
             const item = document.createElement('div');
             item.className = 'carousel-item';
@@ -185,4 +185,5 @@ function closeModal() { document.getElementById('photoModal').style.display = "n
 
 initFlowers();
 animate();
+
 

@@ -84,6 +84,7 @@ body, html {
     top: 0;
     transform-style: preserve-3d;
 }
+/* Оставь всё остальное как было, просто убери лишние padding из .carousel-item */
 
 .carousel-item img {
     width: 100%;
@@ -223,3 +224,4 @@ body, html {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+

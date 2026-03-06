@@ -77,13 +77,12 @@ body, html {
 }
 
 .carousel-item {
-    width: 180px;      /* Было больше, делаем чуть уже */
-    height: 250px;     /* Тоже уменьшаем, чтобы сохранить пропорции */
+    width: 150px;       /* Уменьшили с 180 до 150 */
+    height: 200px;      /* Уменьшили пропорционально */
     position: absolute;
-    /* ... остальные настройки оставь как есть ... */
-    left: 0;
-    top: 0;
     transform-style: preserve-3d;
+    padding: 0 10px;    /* ВОТ ОНО: это создаст «воздушную подушку» по бокам */
+    box-sizing: border-box;
 }
 /* Оставь всё остальное как было, просто убери лишние padding из .carousel-item */
 
@@ -225,5 +224,6 @@ body, html {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 
 

@@ -3,7 +3,6 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    /* Убрали overflow: hidden, чтобы можно было читать длинное поздравление */
     min-height: 100vh;
     background: linear-gradient(135deg, #fff5f7 0%, #fec8d8 50%, #ffbbcc 100%); 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,7 +11,7 @@ body, html {
 
 /* 2. Холсты */
 #flowerCanvas, #heartCanvas {
-    position: fixed; /* Зафиксировали на фоне */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -29,7 +28,7 @@ body, html {
     z-index: 10;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Изменили с center, чтобы при расширении карточка росла вниз */
+    align-items: flex-start;
     min-height: 100vh;
     padding: 40px 20px;
     box-sizing: border-box;
@@ -53,15 +52,15 @@ body, html {
 }
 
 .card.expanded {
-    max-width: 1100px; /* Еще чуть шире для простора */
+    max-width: 1100px;
 }
 
 /* 4. ГАЛЕРЕЯ: 3D КАРУСЕЛИ */
 #photoGallery {
-    margin-top: 100px; /* ОПУСТИЛИ ФОТО НИЖЕ */
+    margin-top: 120px; /* Увеличили отступ сверху */
     display: none;
     height: 500px;
-    perspective: 3000px; /* ГЛУБИНА */
+    perspective: 3000px;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -91,15 +90,16 @@ body, html {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
-    border: 6px solid #fff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 12px solid #fff; /* Утолщенная белая рамка для разделения фото */
+    box-shadow: 0 15px 40px rgba(255, 77, 109, 0.2); /* Розовая тень под цвет фона */
     cursor: pointer;
     transition: transform 0.3s ease;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .carousel-item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08); /* Чуть заметнее зум при наведении */
 }
 
 .photo-caption {
@@ -123,10 +123,10 @@ body, html {
 
 /* Кнопки управления */
 .carousel-controls {
-    display: none; /* Включаем через JS */
+    display: none;
     justify-content: center;
-    gap: 40px;
-    margin-top: 30px; /* ПОДТЯНУЛИ ВЫШЕ К ФОТО */
+    gap: 80px; /* Больше расстояния между кнопками */
+    margin-top: 60px; /* Опустили кнопки ниже карусели */
 }
 
 .nav-btn {
@@ -154,7 +154,7 @@ body, html {
 /* 5. ФИНАЛЬНЫЙ ТЕКСТ */
 .final-letter {
     display: none;
-    margin-top: 30px; /* ПОДТЯНУЛИ ВЫШЕ */
+    margin-top: 40px;
     text-align: center;
     color: #4a4a4a;
     line-height: 1.6;
@@ -175,6 +175,7 @@ body, html {
     .carousel-view, .carousel-item { width: 140px; height: 190px; }
     #photoGallery { height: 350px; margin-top: 60px; }
     .photo-caption { font-size: 0.8rem; bottom: -35px; }
+    .carousel-controls { gap: 40px; margin-top: 30px; }
 }
 
 /* 7. Модалка */
@@ -190,7 +191,7 @@ body, html {
 }
 .modal-content { max-width: 90%; max-height: 85%; border-radius: 15px; box-shadow: 0 0 30px rgba(255,255,255,0.2); }
 
-/* Остальное (кнопка и лоадер) */
+/* Остальное */
 .magic-button {
     background: linear-gradient(45deg, #ff4d6d, #ff758f);
     color: white; border: none; padding: 16px 45px;
